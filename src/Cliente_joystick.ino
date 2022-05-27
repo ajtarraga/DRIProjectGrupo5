@@ -42,8 +42,6 @@ bool connectToServer() {
   BLEClient*  pClient  = BLEDevice::createClient();
   Serial.println(" - Created client");
 
-  pClient->setClientCallbacks(new MyClientCallback());
-
   // Connect to the remove BLE Server.
   pClient->connect(myDevice);  // if you pass BLEAdvertisedDevice instead of address, it will be recognized type of peer device address (public or private)
   Serial.println(" - Connected to server");
